@@ -20,9 +20,7 @@ describe('Protractor LoginPage App', function() {
     element(by.id('submitButton')).click();
       browser.sleep(2000);
 		let ale:Alert = browser.switchTo().alert();
-		// clicks 'OK' button
 		ale.accept();
-
     browser.sleep(2000).then(function(){
     browser.getCurrentUrl().then(function(actualUrl){ // promise
       console.log("Actual url",actualUrl);
