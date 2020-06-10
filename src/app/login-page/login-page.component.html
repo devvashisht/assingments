@@ -4,6 +4,9 @@
     <label>
       User Name:
       <input id="userName" type="text" formControlName="userName">
+      <div *ngIf="loginForm.controls.userName.dirty && loginForm.controls.userName.invalid"> <small
+          class="margin-left-msg">Username should be minimum 5 characters</small>
+      </div>
     </label>
   </div>
   <br>
@@ -11,6 +14,9 @@
     <label>
       Password:
       <input id='password' class='margin-left' type="text" formControlName="password">
+      <div *ngIf="loginForm.controls.password.dirty && loginForm.controls.password.invalid"> <small
+          class="margin-left-msg">Password should be minimum 5 characters</small>
+      </div>
     </label></div>
   <button id="submitButton" class='submit-button' type="submit" [disabled]="!loginForm.valid">
     Submit
